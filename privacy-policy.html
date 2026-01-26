@@ -3,104 +3,381 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy</title>
+    <title>Privacy Policy - FlopIQ by Betwise GG</title>
     <style>
+        :root {
+            --primary: #5865F2;
+            --text: #2e3338;
+            --text-muted: #6b7280;
+            --bg: #ffffff;
+            --bg-alt: #f9fafb;
+            --border: #e5e7eb;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.7;
+            color: var(--text);
+            background: var(--bg);
+            padding: 2rem;
+        }
+        
+        .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
-            color: #333;
         }
+        
         h1 {
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
         }
+        
         h2 {
-            color: #34495e;
-            margin-top: 30px;
+            font-size: 1.5rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border);
+            color: var(--text);
         }
+        
         h3 {
-            color: #555;
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            color: var(--text);
         }
+        
         p {
-            margin: 10px 0;
+            margin-bottom: 1rem;
         }
-        ul {
-            margin: 10px 0;
-            padding-left: 20px;
+        
+        .meta {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
         }
-        .last-updated {
-            font-style: italic;
-            color: #7f8c8d;
+        
+        ul, ol {
+            margin-bottom: 1rem;
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 0.95rem;
+        }
+        
+        th, td {
+            padding: 0.75rem;
+            text-align: left;
+            border: 1px solid var(--border);
+        }
+        
+        th {
+            background: var(--bg-alt);
+            font-weight: 600;
+        }
+        
+        strong {
+            font-weight: 600;
+        }
+        
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .highlight {
+            background: var(--bg-alt);
+            border-left: 4px solid var(--primary);
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .contact-box {
+            background: var(--bg-alt);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+        
+        hr {
+            border: none;
+            border-top: 1px solid var(--border);
+            margin: 2rem 0;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 1.75rem;
+            }
+            
+            h2 {
+                font-size: 1.25rem;
+            }
+            
+            table {
+                font-size: 0.85rem;
+            }
+            
+            th, td {
+                padding: 0.5rem;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Privacy Policy</h1>
-    <p class="last-updated"><strong>Last Updated:</strong> October 21, 2024</p>
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <p class="meta">
+            <strong>Last Updated:</strong> January 26, 2026<br>
+            <strong>Effective Date:</strong> January 26, 2026
+        </p>
 
-    <h2>Introduction</h2>
-    <p>This privacy policy describes how we collect, use, and share information when you use our mobile application ("App").</p>
+        <h2>1. Introduction</h2>
+        <p>Welcome to FlopIQ ("we," "our," or "us"). This Privacy Policy explains how Betwise GG ("Company") collects, uses, discloses, and safeguards your information when you use our mobile application, website, and related services (collectively, the "Service").</p>
+        <p>We are committed to protecting your privacy and handling your data in an open and transparent manner. This policy complies with the European Union's General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), and other applicable privacy laws.</p>
+        <div class="highlight">
+            <strong>Please read this Privacy Policy carefully.</strong> By using the Service, you agree to the collection and use of information in accordance with this policy.
+        </div>
 
-    <h2>Information We Collect</h2>
-    
-    <h3>Information You Provide</h3>
-    <p>We may collect information that you provide directly to us, such as when you create an account, use certain features, or contact us for support.</p>
+        <h2>2. Information We Collect</h2>
+        
+        <h3>2.1 Information You Provide Directly</h3>
+        <ul>
+            <li><strong>Account Information:</strong> When you create an account, we collect your email address, display name, and authentication credentials (via Google or Apple Sign-In).</li>
+            <li><strong>Profile Information:</strong> Optional information you choose to add, such as profile pictures, poker statistics preferences, and display settings.</li>
+            <li><strong>User Content:</strong> Poker session data, hand histories, notes, and any other content you voluntarily submit to the Service.</li>
+            <li><strong>Communications:</strong> Information you provide when contacting support or participating in surveys.</li>
+        </ul>
 
-    <h3>Automatically Collected Information</h3>
-    <p>When you use our App, we may automatically collect certain information about your device, including:</p>
-    <ul>
-        <li>Device type and model</li>
-        <li>Operating system version</li>
-        <li>Unique device identifiers</li>
-        <li>App usage statistics</li>
-        <li>Crash logs and diagnostic information</li>
-    </ul>
+        <h3>2.2 Information Collected Automatically</h3>
+        <p>When you use our Service, we automatically collect:</p>
+        <ul>
+            <li><strong>Device Information:</strong> Device type, model, operating system version, unique device identifiers, and mobile network information.</li>
+            <li><strong>Usage Data:</strong> App interactions, features used, session duration, and navigation patterns.</li>
+            <li><strong>Log Data:</strong> IP address, access times, pages viewed, app crashes, and system activity.</li>
+            <li><strong>Location Data:</strong> General location based on IP address (we do not collect precise GPS location without explicit consent).</li>
+        </ul>
 
-    <h2>How We Use Your Information</h2>
-    <p>We use the information we collect to:</p>
-    <ul>
-        <li>Provide, maintain, and improve our App</li>
-        <li>Respond to your requests and provide customer support</li>
-        <li>Monitor and analyze usage patterns and trends</li>
-        <li>Detect, prevent, and address technical issues</li>
-        <li>Comply with legal obligations</li>
-    </ul>
+        <h3>2.3 Information from Third Parties</h3>
+        <ul>
+            <li><strong>Authentication Providers:</strong> When you sign in via Google or Apple, we receive your email address and basic profile information as permitted by your privacy settings with those providers.</li>
+            <li><strong>Analytics Services:</strong> We use third-party analytics to understand Service usage patterns.</li>
+        </ul>
 
-    <h2>Information Sharing</h2>
-    <p>We do not sell your personal information. We may share your information in the following circumstances:</p>
-    <ul>
-        <li><strong>With your consent:</strong> When you give us permission to share specific information</li>
-        <li><strong>Service providers:</strong> With third-party service providers who perform services on our behalf</li>
-        <li><strong>Legal requirements:</strong> When required by law or to protect our rights and safety</li>
-    </ul>
+        <h2>3. How We Use Your Information</h2>
+        <p>We use collected information for the following purposes:</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Purpose</th>
+                    <th>Legal Basis (GDPR)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Provide and maintain the Service</td>
+                    <td>Contract performance</td>
+                </tr>
+                <tr>
+                    <td>Process your account registration</td>
+                    <td>Contract performance</td>
+                </tr>
+                <tr>
+                    <td>Respond to your inquiries and support requests</td>
+                    <td>Contract performance / Legitimate interest</td>
+                </tr>
+                <tr>
+                    <td>Send service-related communications</td>
+                    <td>Contract performance</td>
+                </tr>
+                <tr>
+                    <td>Improve and personalize the Service</td>
+                    <td>Legitimate interest</td>
+                </tr>
+                <tr>
+                    <td>Analyze usage patterns and trends</td>
+                    <td>Legitimate interest</td>
+                </tr>
+                <tr>
+                    <td>Detect and prevent fraud or abuse</td>
+                    <td>Legitimate interest</td>
+                </tr>
+                <tr>
+                    <td>Comply with legal obligations</td>
+                    <td>Legal obligation</td>
+                </tr>
+                <tr>
+                    <td>Send marketing communications (with consent)</td>
+                    <td>Consent</td>
+                </tr>
+            </tbody>
+        </table>
 
-    <h2>Data Security</h2>
-    <p>We implement reasonable security measures to protect your information from unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure.</p>
+        <h2>4. How We Share Your Information</h2>
+        <div class="highlight">
+            <strong>We do not sell your personal information.</strong>
+        </div>
+        <p>We may share your information in the following circumstances:</p>
 
-    <h2>Children's Privacy</h2>
-    <p>Our App is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe we have collected information from a child under 13, please contact us.</p>
+        <h3>4.1 Service Providers</h3>
+        <p>We share information with third-party vendors who perform services on our behalf, including:</p>
+        <ul>
+            <li>Cloud hosting and infrastructure (Supabase)</li>
+            <li>Analytics providers</li>
+            <li>Customer support tools</li>
+        </ul>
+        <p>These providers are contractually obligated to protect your information and use it only for the services they provide to us.</p>
 
-    <h2>Changes to This Policy</h2>
-    <p>We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page and updating the "Last Updated" date.</p>
+        <h3>4.2 Legal Requirements</h3>
+        <p>We may disclose your information if required to do so by law or in response to valid requests by public authorities (e.g., court orders, government requests).</p>
 
-    <h2>Contact Us</h2>
-    <p>If you have any questions about this privacy policy, please contact us at:</p>
-    <ul>
-        <li>Email: [Your contact email]</li>
-    </ul>
+        <h3>4.3 Business Transfers</h3>
+        <p>In the event of a merger, acquisition, or sale of all or a portion of our assets, your information may be transferred as part of that transaction.</p>
 
-    <h2>Your Rights</h2>
-    <p>Depending on your location, you may have certain rights regarding your personal information, including:</p>
-    <ul>
-        <li>The right to access your personal information</li>
-        <li>The right to correct inaccurate information</li>
-        <li>The right to delete your information</li>
-        <li>The right to object to or restrict certain processing</li>
-    </ul>
-    <p>To exercise these rights, please contact us using the information provided above.</p>
+        <h3>4.4 With Your Consent</h3>
+        <p>We may share your information for other purposes with your explicit consent.</p>
+
+        <h3>4.5 Aggregated or De-identified Data</h3>
+        <p>We may share aggregated or de-identified information that cannot reasonably be used to identify you.</p>
+
+        <h2>5. Data Retention</h2>
+        <p>We retain your personal information for as long as necessary to:</p>
+        <ul>
+            <li>Provide the Service to you</li>
+            <li>Comply with legal obligations</li>
+            <li>Resolve disputes and enforce agreements</li>
+        </ul>
+        <p>When you delete your account, we will delete or anonymize your personal information within 30 days, except where we are required to retain it for legal purposes.</p>
+
+        <h2>6. Data Security</h2>
+        <p>We implement industry-standard security measures to protect your information, including:</p>
+        <ul>
+            <li>Encryption of data in transit (TLS/SSL) and at rest</li>
+            <li>Secure authentication protocols</li>
+            <li>Regular security assessments</li>
+            <li>Access controls and monitoring</li>
+        </ul>
+        <p>However, no method of transmission over the internet or electronic storage is 100% secure. While we strive to protect your information, we cannot guarantee absolute security.</p>
+
+        <h2>7. Your Privacy Rights</h2>
+
+        <h3>7.1 Rights for All Users</h3>
+        <p>Regardless of your location, you have the right to:</p>
+        <ul>
+            <li><strong>Access:</strong> Request a copy of your personal information</li>
+            <li><strong>Correction:</strong> Request correction of inaccurate information</li>
+            <li><strong>Deletion:</strong> Request deletion of your personal information</li>
+            <li><strong>Portability:</strong> Receive your data in a portable format</li>
+        </ul>
+
+        <h3>7.2 Additional Rights for EEA/UK Residents (GDPR)</h3>
+        <p>If you are in the European Economic Area or United Kingdom, you also have the right to:</p>
+        <ul>
+            <li><strong>Restrict Processing:</strong> Request restriction of processing in certain circumstances</li>
+            <li><strong>Object:</strong> Object to processing based on legitimate interests</li>
+            <li><strong>Withdraw Consent:</strong> Withdraw consent at any time (without affecting prior processing)</li>
+            <li><strong>Lodge a Complaint:</strong> File a complaint with your local data protection authority</li>
+        </ul>
+
+        <h3>7.3 Additional Rights for California Residents (CCPA)</h3>
+        <p>If you are a California resident, you have the right to:</p>
+        <ul>
+            <li><strong>Know:</strong> Request disclosure of personal information collected, used, and shared</li>
+            <li><strong>Delete:</strong> Request deletion of personal information (with certain exceptions)</li>
+            <li><strong>Non-Discrimination:</strong> Not be discriminated against for exercising your rights</li>
+            <li><strong>Opt-Out of Sale:</strong> We do not sell personal information, but you may opt out of any future sales</li>
+        </ul>
+        <div class="contact-box">
+            <strong>To exercise your rights, contact us at:</strong> <a href="mailto:privacy@betwise.gg">privacy@betwise.gg</a><br>
+            We will respond to your request within 30 days (or as required by applicable law).
+        </div>
+
+        <h2>8. International Data Transfers</h2>
+        <p>Your information may be transferred to and processed in countries other than your country of residence. These countries may have different data protection laws.</p>
+        <p>For transfers from the EEA/UK, we use appropriate safeguards such as:</p>
+        <ul>
+            <li>Standard Contractual Clauses approved by the European Commission</li>
+            <li>Adequacy decisions where applicable</li>
+        </ul>
+
+        <h2>9. Children's Privacy</h2>
+        <p>Our Service is not intended for children under the age of 16 (or 13 in the United States). We do not knowingly collect personal information from children under these ages.</p>
+        <p>If you believe we have collected information from a child, please contact us immediately at <a href="mailto:privacy@betwise.gg">privacy@betwise.gg</a>, and we will take steps to delete the information.</p>
+
+        <h2>10. Third-Party Links and Services</h2>
+        <p>Our Service may contain links to third-party websites or services. We are not responsible for the privacy practices of these third parties. We encourage you to review their privacy policies before providing any information.</p>
+
+        <h2>11. Cookies and Tracking Technologies</h2>
+        
+        <h3>11.1 What We Use</h3>
+        <ul>
+            <li><strong>Essential Cookies:</strong> Required for Service functionality</li>
+            <li><strong>Analytics:</strong> To understand how the Service is used</li>
+            <li><strong>Preferences:</strong> To remember your settings</li>
+        </ul>
+
+        <h3>11.2 Your Choices</h3>
+        <p>You can control cookies through your browser settings. Note that disabling certain cookies may affect Service functionality.</p>
+        <p>For our mobile app, we use similar technologies for analytics and crash reporting, which you can control through your device settings.</p>
+
+        <h2>12. Changes to This Privacy Policy</h2>
+        <p>We may update this Privacy Policy from time to time. We will notify you of material changes by:</p>
+        <ul>
+            <li>Posting the updated policy with a new "Last Updated" date</li>
+            <li>Sending you an email notification (for significant changes)</li>
+            <li>Displaying a notice within the Service</li>
+        </ul>
+        <p>Your continued use of the Service after changes become effective constitutes acceptance of the updated policy.</p>
+
+        <h2>13. Contact Us</h2>
+        <div class="contact-box">
+            <strong>Betwise GG</strong><br>
+            Email: <a href="mailto:privacy@betwise.gg">privacy@betwise.gg</a><br>
+            Support: <a href="mailto:support@betwise.gg">support@betwise.gg</a><br><br>
+            <strong>For EEA/UK residents:</strong><br>
+            You may also contact your local data protection authority if you have concerns about our data practices.
+        </div>
+
+        <h2>14. Additional Disclosures</h2>
+
+        <h3>14.1 Do Not Track</h3>
+        <p>Some browsers have a "Do Not Track" feature. Our Service does not currently respond to Do Not Track signals.</p>
+
+        <h3>14.2 Nevada Residents</h3>
+        <p>Nevada residents may opt out of the sale of personal information. We do not sell personal information, but you may contact us at <a href="mailto:privacy@betwise.gg">privacy@betwise.gg</a> to submit a request.</p>
+
+        <h3>14.3 Virginia, Colorado, Connecticut Residents</h3>
+        <p>Residents of these states have similar rights to California residents under their respective state privacy laws. Contact us to exercise your rights.</p>
+
+        <hr>
+        <p style="color: var(--text-muted); font-size: 0.9rem; text-align: center;">
+            This Privacy Policy was last updated on January 26, 2026.
+        </p>
+    </div>
 </body>
 </html>
