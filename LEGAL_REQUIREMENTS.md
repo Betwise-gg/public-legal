@@ -121,3 +121,15 @@ Covers the platform/service rules. This is where the Flopiq-specific stuff lives
 - Once drafted, I'll host them at the public-legal repo and link them from the app + store listings.
 
 Nothing unusual about our data practices overall — it's a standard "user accounts + user-generated content + cloud sync" setup, with an AI feature and location-based venue search on top.
+
+---
+
+## Contact Emails
+
+These addresses are referenced in the legal docs and in-app:
+
+| Purpose | Address |
+|---------|---------|
+| Legal inquiries | legal@flopiq.com |
+| Privacy requests (data deletion, export, questions) | privacy@flopiq.com |
+| User support | support@flopiq.com |
