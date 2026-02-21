@@ -1,14 +1,41 @@
 # What We Need for App Store & Play Store (Legal Docs)
 
-Both the App Store and Play Store **require a Privacy Policy URL** before you can publish. A EULA/TOS isn't strictly required by the stores, but it's strongly recommended — and yes Keith, a EULA is what I mean by TOS.
+We need up to **3 separate documents**. Here's what each one is, whether it's required, and what it needs to cover for Flopiq.
 
-We need both hosted as web pages. I have a repo ready for that: https://github.com/Betwise-gg/public-legal
+All docs will be hosted as web pages at: https://github.com/Betwise-gg/public-legal
 
 ---
 
-## 1. Privacy Policy
+## Quick Summary: What's Required?
 
-This needs to disclose what data we collect, how we use it, and what third parties are involved.
+| Document | App Store (Apple) | Play Store (Google) | Do we need a custom one? |
+|----------|-------------------|---------------------|--------------------------|
+| **Privacy Policy** | **Required** — must provide URL in App Store Connect | **Required** — must provide URL in Play Console + in-app | Yes, we must write our own |
+| **EULA** | Optional — Apple provides a [standard EULA](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/) that applies automatically if we don't provide one | Not required | Recommended (see below) |
+| **Terms of Service** | Not required by the store | Not required by the store | Recommended (see below) |
+
+### Additional Store Requirements (not documents, but forms we fill out)
+
+- **Apple Privacy Nutrition Labels** — a form in App Store Connect where we declare what data the app collects. Filled out by Stan based on the data table below.
+- **Google Data Safety Section** — same concept for Play Console. Required for all apps, even on closed testing tracks. Filled out by Stan.
+
+---
+
+## EULA vs. Terms of Service — They're Different Things
+
+**EULA (End-User License Agreement)** — governs the *software license*. It says: "we grant you a license to use this app on your device, here are the restrictions." It's about the *code* you install.
+
+**Terms of Service (TOS)** — governs the *service/platform*. It says: "here are the rules for using our platform, your account, user content, and our cloud features." It's about the *service* you access.
+
+**For Flopiq, we arguably need both** because the app is installed software (EULA) AND a cloud-synced service with accounts, social features, and AI (TOS). In practice, many apps combine them into one document. Keith — up to you whether to keep them separate or merge into one "Terms of Use" that covers both.
+
+If we don't provide a custom EULA for Apple, their [standard EULA](https://www.apple.com/legal/internet-services/itunes/dev/stdeula/) applies automatically. It's very generic and doesn't cover our AI features, subscriptions, or content rules — so a custom one is recommended.
+
+---
+
+## 1. Privacy Policy (REQUIRED)
+
+Must be hosted at a public URL. Linked from both store listings AND from within the app (settings screen).
 
 ### Data We Collect
 
@@ -23,6 +50,7 @@ This needs to disclose what data we collect, how we use it, and what third parti
 | **Crash reports & diagnostics** | Device model, OS version, app version, email, user ID | Sent automatically to Sentry (crash reporting service). |
 | **AI assistant usage** | Conversations with the hand entry assistant | Proxied through our server to Anthropic (Claude). We track usage counts for rate limiting. |
 | **Images** | Seat/player avatar photos | User uploads. Stored in Supabase Storage. |
+
 ### Third-Party Services to Disclose
 
 - **Supabase** — authentication, database, file storage, real-time sync
@@ -31,7 +59,7 @@ This needs to disclose what data we collect, how we use it, and what third parti
 - **Sentry** — crash reporting and error tracking
 - **Apple & Google** — OAuth sign-in, push notifications, app distribution
 
-### Other Key Points
+### Other Privacy Points
 
 - **Offline-first** — the app works without internet. Data syncs when connection is available.
 - **Guest mode** — users can use the app without creating an account (data stays local only).
@@ -40,9 +68,28 @@ This needs to disclose what data we collect, how we use it, and what third parti
 
 ---
 
-## 2. EULA / Terms of Service
+## 2. EULA (RECOMMENDED)
 
-### What It Should Cover
+Covers the software license. Apple's standard EULA applies by default if we don't provide one, but a custom EULA lets us add clauses specific to our app.
+
+### What a Custom EULA Should Cover
+
+1. **License grant** — non-exclusive, non-transferable license to use the app on user's devices
+2. **Restrictions** — no reverse engineering, no redistribution, no scraping
+3. **Apple's minimum terms** — Apple [requires specific clauses](https://www.apple.com/legal/internet-services/itunes/dev/minterms/) if we write a custom EULA:
+   - Agreement is between Betwise/Flopiq and the user (not Apple)
+   - Apple has no obligation for maintenance or support
+   - Apple is not responsible for product claims or IP infringement
+4. **Termination** — we can revoke the license for violations
+5. **Limitation of liability** — standard disclaimer
+
+---
+
+## 3. Terms of Service (RECOMMENDED)
+
+Covers the platform/service rules. This is where the Flopiq-specific stuff lives.
+
+### What TOS Should Cover
 
 1. **Not a gambling platform** — Flopiq is a poker session *tracking and analysis* tool. No real money changes hands through the app. Users log their own sessions after the fact.
 
@@ -60,14 +107,17 @@ This needs to disclose what data we collect, how we use it, and what third parti
 
 8. **Beta disclaimer** — the app is currently in beta. Features may change, data may be reset.
 
-9. **Limitation of liability** — standard disclaimer that we're not responsible for poker decisions made based on the app's data or AI suggestions.
+9. **Limitation of liability** — not responsible for poker decisions made based on the app's data or AI suggestions.
+
+10. **Acceptable use** — no cheating tools, no sharing others' data without consent, no abusive content in social features.
 
 ---
 
-## What I Need From You
+## What I Need From You, Keith
 
-- A recycled EULA and Privacy Policy that you can adapt using the info above
-- I'll answer any follow-up questions about specific data flows or technical details
-- Once drafted, I'll host them at the public-legal repo and link them from the app + store listings
+- **Privacy Policy** — adapt/recycle one using the data table and third-party list above. This is the blocker for store submission.
+- **EULA + TOS** — either as two separate docs or combined into one "Terms of Use." If recycling an old EULA, make sure to add the Flopiq-specific TOS clauses (AI disclaimer, content rules, etc.) and Apple's required minimum EULA terms.
+- I'll answer any follow-up questions about specific data flows or technical details.
+- Once drafted, I'll host them at the public-legal repo and link them from the app + store listings.
 
-Both docs can be fairly standard/boilerplate with the specifics from above plugged in. Nothing unusual about our data practices — it's a pretty standard "user account + user-generated content + cloud sync" setup with an AI feature on top.
+Nothing unusual about our data practices overall — it's a standard "user accounts + user-generated content + cloud sync" setup, with an AI feature and location-based venue search on top.
